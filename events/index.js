@@ -14,11 +14,11 @@ app.post('/events',  (req, res) => {
     //post service
      axios.post("http://posts-clusterip-srv:4000/events", event); 
      //comment service
-   //  axios.post("http://localhost:4001/events", event);
+     axios.post("http://comments-clusterip-srv:4001/events", event);
     //query service
-     //axios.post("http://localhost:4002/events", event);
+     axios.post("http://queries-clusterip-srv:4002/events", event);
      //Moderation
-     //axios.post("http://localhost:4003/events", event);
+     axios.post("http://moderations-clusterip-srv:4003/events", event);
  
     res.send({status: 'OK'})
 

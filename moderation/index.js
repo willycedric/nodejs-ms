@@ -21,7 +21,7 @@ app.post('/events', async (req, res) =>{
             type:'CommentModerated',
         };
 
-       await axios.post('http://localhost:4005/events',event);
+       await axios.post('http://event-bus-srv:4005/events',event);
        res.send({});
     }
 
